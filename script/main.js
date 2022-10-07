@@ -3,6 +3,12 @@ $(document).ready(function () {
     var floorPath = $('.home-image path');
     var counterUp = $('.counter-up');
     var counterDown = $('.counter-down');
+    var modal = $('.modal');
+    var close = $('.modal-close-button');
+
+    floorPath.on('click', toggleModal);
+
+    close.on('click', toggleModal);
 
     floorPath.on('mouseover', function () {
         floorPath.removeClass('current-floor');
@@ -30,5 +36,8 @@ $(document).ready(function () {
             floorPath.removeClass('current-floor');
             $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor');
         }
-    })
+    });
+    function toggleModal() {
+        modal.toggleClass('is-open');
+    }
 });
