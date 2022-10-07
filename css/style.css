@@ -71,6 +71,9 @@ body {
 .home-image path:hover {
     opacity: 1;
 }
+.current-floor {
+    opacity: 1;
+}
 .counter-group {
     display: flex;
     flex-direction: column;
